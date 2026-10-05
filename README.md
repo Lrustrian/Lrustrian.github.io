@@ -1,2 +1,132 @@
-# Lrustrian.github.io
-Lrustrian
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-whidth, initial-escale=1.0">
+        <title>Coffe new life</title>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+               ☕ Coffe New Life
+            </div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">producto</a>
+                <a href="#contacto">contacto</a>
+                <a href="#Nosotros">Nosotros</a>
+            </nav>
+            <button class="carrito-bn" onclick="mostrarcarrito()">
+               🛒 carrito( <span id="cantidad-carrito">0</span>)
+            </button>
+        </header>
+        <main>
+             <section id="inicio" class="hero">
+                <div class="hero-contenido">      
+                <h1> Tu y un cafe por la mañana son la combinación perfecta</h1>  
+                <p> El mejor cafe lo ecnontraras con tu tienda ideal </p>
+
+                <a href="#ver cafes" class="boton">
+                    Ver cafes
+                </a>
+             </div>
+             </section>
+             <section id="productos" class="productos-seccion">
+                <h2>Nuestros cafes</h2>
+                <p class="descripcion">
+                    Nuestro cafe te busca para un finde relax
+                </p>
+                <div class="busqueda">
+                    <input
+                    type="text"
+                    id="buscador"
+                    placeholder="buscar producto">
+                </div>
+                <div class="producto">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_949927-MLU71457485531_092023-F.webp" alt="Mis raices">
+                    <h3>Cafe mis raices chiapas</h3>
+                    <p>Un rico cafe junto a tu biblia te reinicia la vida</p>
+                    <span class="precio">Q95.00</span>
+                    <button onclick="agregararCarrito('Cafe mis raices,95')">
+                        Agregar al Carrito
+                    </button>
+                </div>
+                <div class="producto">
+                    <img src="https://mentta.com/vendedor/comprar-alimentos-etnicos/productos/cafe-especialidad-pure-arabica-guatemala-en-grano-bio-fairtrade-180g?srsltid=AU7gw4W4csumq3Dzv1ZC6AsH-0QLRrO_nqyGfGlCGkpC9z2F1tpuHmhy" alt="Destination">
+                    <h3>Destination</h3>
+                    <p> Un cafe fuerte, y dulce para despertar activo un lunes por la mañana</p>
+                    <span class="precio">Q 150.00</span>
+                    <button onclick="agregarCarrito('Destination,150')">
+                        Agregar al Carrito
+                    </button>
+                </div>
+                <div class="producto">
+                    <img src="https://mocaibo.com/tienda/cafes-de-especialidad/cafe-de-especialidad-guatemala-cerezo-estate-500gr/" alt="mocaibo">
+                    <h3>Cafe Mocaibo</h3>
+                    <p>Mocaibo, un cafe dificil de olvidar</p>
+                    <span class="precio">Q 250.00</span>
+                    <button onclick="agregarCarrito('Cafe mocaibo,250')">
+                        Agregar al Carrito
+                    </button>
+                </div>
+                <div class="producto">
+                    <img src="https://baristaorigen.com/producto/cafe-de-especialidad-guatemala/" alt="Barista">
+                    <h3>Cafe Barista</h3>
+                    <p> Buscas calidad? pues con barista lo encuentras todo</p>
+                    <span class="precio">Q 300.00</span>
+                    <button onclick="agregarCarrito('Cafe Barista,300')">
+                        Agregar al Carrito
+                    </button>
+                </div>
+
+             </section>
+             <section id="Nosotros" class="Nosotros">
+                <h2> Sobre Nosotros</h2>
+                <p>Bienvenido a un rincón diseñado para pausar el tiempo y despertar tus sentidos. 
+                    En nuestra cafetería no solo preparamos café, creamos momentos:
+                     combinamos el grano perfecto, el tueste ideal y una calidez que te hace sentir en casa desde el primer sorbo. 
+                     Ya sea que busques el impulso de energía para iniciar tu mañana, un espacio acogedor para trabajar o el lugar perfecto para conectar con quienes más quieres, 
+                     aquí siempre encontrarás una taza servida con dedicación y el aroma inolvidable del buen café. 
+                     Ven a descubrir tu nuevo lugar favorito en la ciudad; estamos listos para sorprenderte.
+                    </p>
+                    <p> Nuestro Objetivo es enamorarte con nuestros productos</p>
+             </section>
+
+             <section id="contacto" class="contacto">
+            <h2>Contáctanos</h2>
+            <p>📍 Guatemala, Guatemala</p>
+            <p>📞 Teléfono: 1234-5678</p>
+            <p>✉️ Correo: coffestore@gmail.com</p>
+        </section>
+    </main>
+
+    
+    <footer> 
+        <p><strong>Coffe new life</strong></p>
+        <p>© 2026 Todos los derechos reservados.</p>
+    </footer>
+
+    
+    <div id="ventana-carrito" class="carrito">
+        <div class="carrito-contenido">
+            <span class="cerrar" onclick="cerrarCarrito()">&times;</span>
+            <h2>Mi carrito</h2>
+
+            <div id="lista-carrito">
+                <p>Tu carrito está vacío.</p>
+            </div>
+
+            <h3>Total: Q. <span id="total-carrito">0.00</span></h3>
+
+            <button onclick="finalizarCompra()">
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+    </body>
+</html>
